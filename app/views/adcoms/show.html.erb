@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Admin:</strong>
+  <%= @adcom.admin %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @adcom.company %>
+</p>
+
+<%= link_to 'Edit', edit_adcom_path(@adcom) %> |
+<%= link_to 'Back', adcoms_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :adcoms
   resources :companies
   resources :admins
   # The priority is based upon order of creation: first created -> highest priority.
