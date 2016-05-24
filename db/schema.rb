@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160524035258) do
+ActiveRecord::Schema.define(version: 20160524035422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adcoms", force: :cascade do |t|
+    t.integer  "admin_id"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "adcoms", ["admin_id"], name: "index_adcoms_on_admin_id", using: :btree
+  add_index "adcoms", ["company_id"], name: "index_adcoms_on_company_id", using: :btree
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
@@ -31,4 +41,6 @@ ActiveRecord::Schema.define(version: 20160524035258) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "adcoms", "admins"
+  add_foreign_key "adcoms", "companies"
 end
