@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Plusrs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plan</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plusrs.each do |plusr| %>
+      <tr>
+        <td><%= plusr.plan %></td>
+        <td><%= plusr.user %></td>
+        <td><%= link_to 'Show', plusr %></td>
+        <td><%= link_to 'Edit', edit_plusr_path(plusr) %></td>
+        <td><%= link_to 'Destroy', plusr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Plusr', new_plusr_path %>

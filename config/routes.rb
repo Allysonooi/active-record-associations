@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :plusrs
   resources :plans
   resources :users
   resources :adcoms
