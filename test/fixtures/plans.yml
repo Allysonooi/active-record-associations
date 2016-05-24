@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  price: MyString
+  billing_cycle: MyString
+  next_billing_date: MyString
+  deadline_date: MyString
+  admin_id: 
+
+two:
+  name: MyString
+  price: MyString
+  billing_cycle: MyString
+  next_billing_date: MyString
+  deadline_date: MyString
+  admin_id: 
